@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/arckriver17/CFA-META-WSS-WS-AKUN-GRATISAN/main
 5. kasih Name bebas yang penting ada karakternya
 6. tempelkan tautan dibaris URL "Accept only http(s)"
 7. atur Auto Update jadi 15 menit
-8. klik icon memori ujung atas kanan (simpan)
+8. klik icon memori ujung atas kanan "simpan"
 
 udah selesai!
 
