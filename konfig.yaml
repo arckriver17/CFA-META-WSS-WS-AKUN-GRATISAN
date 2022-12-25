@@ -36,7 +36,7 @@ proxies:
 
 
 proxy-groups:
-  - name: GLOBAL
+  - name: final
     type: fallback
     disable-udp: false
     proxies:
@@ -55,4 +55,4 @@ proxy-groups:
 
 
 rules:
-  - MATCH,GLOBAL
+  - MATCH,final
