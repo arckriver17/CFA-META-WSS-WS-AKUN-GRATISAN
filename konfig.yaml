@@ -73,7 +73,7 @@ proxy-groups:
     type: fallback
     disable-udp: false
     proxies:
-      - sg2-v2ray.sshkit.org21
+      - sg2-v2ray.sshkit.org1
       - sg2-v2ray.sshkit.org2
       - sg3-v2ray.sshkit.org3
       - sg3-v2ray.sshkit.org4
