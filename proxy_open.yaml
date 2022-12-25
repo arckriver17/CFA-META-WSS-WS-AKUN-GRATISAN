@@ -1,0 +1,33 @@
+proxies:
+  - name: sg2-v2ray.sshkit.org1
+    server: 172.67.199.34
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1350195536/63a625eb069d5/
+      headers:
+        Host: sg2-v2ray.sshkit.org
+    udp: true
+  - name: sg2-v2ray.sshkit.org2
+    server: 104.18.21.226
+    port: 80
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg2-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1350195536/63a625eb069d5/
+      headers:
+        Host: sg2-v2ray.sshkit.org
+    udp: true
