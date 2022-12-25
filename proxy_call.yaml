@@ -31,35 +31,3 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: sg3-v2ray.sshkit.org3
-    server: 172.67.199.34
-    port: 443
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3-v2ray.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/1350195536/63a8c9c885127/
-      headers:
-        Host: sg3-v2ray.sshkit.org
-    udp: true
-  - name: sg3-v2ray.sshkit.org4
-    server: 104.18.21.226
-    port: 80
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg3-v2ray.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/1350195536/63a8c9c885127/
-      headers:
-        Host: sg3-v2ray.sshkit.org
-    udp: true
