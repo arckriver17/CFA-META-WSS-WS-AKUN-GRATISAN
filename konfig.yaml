@@ -40,8 +40,8 @@ proxy-groups:
     type: fallback
     disable-udp: false
     proxies:
-      - sg3-v2ray.sshkit.org
-      - sg3-v2ray.sshkit.org
+      - sg3-v2ray.sshkit.org3
+      - sg3-v2ray.sshkit.org4
 
 
 
