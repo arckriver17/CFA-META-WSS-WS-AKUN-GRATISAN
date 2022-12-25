@@ -83,6 +83,22 @@ proxies:
       headers:
         Host: sg-contabo.vmess.sbs
     udp: true
+  - name: sg-contabo.vmess.sbs6
+    server: 104.18.21.226
+    port: 80
+    type: vmess
+    uuid: 54a3af50-84ac-11ed-b135-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg-contabo.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: sg-contabo.vmess.sbs
+    udp: true
 
 
 proxy-groups:
@@ -95,6 +111,7 @@ proxy-groups:
       - sg3-v2ray.sshkit.org3
       - sg3-v2ray.sshkit.org4
       - sg-contabo.vmess.sbs5
+      - sg-contabo.vmess.sbs6
 
 
 
