@@ -45,10 +45,6 @@ proxy-groups:
 
 
 
-      - DIRECT
-      - REJECT
-
-
     url: http://www.gstatic.com/generate_204
     interval: '24'
 
