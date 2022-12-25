@@ -1,0 +1,111 @@
+###
+
+
+
+proxy-providers:
+  01CALL:
+    type: file
+    path: "./proxy_call.yaml"
+    url: link.mu
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 24
+
+  02OPEN:
+    type: file
+    path: "./proxy_open.yaml"
+    url: link.mu
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 24
+
+proxy-groups:
+- name: CONTROL
+  type: select
+  disable-udp: false
+  proxies:
+  - LIFE
+  - GAME
+  - SAME
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: ADBLOCK
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - CONTROL
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: LIFE 
+  type: fallback
+  disable-udp: false
+  proxies:
+  - CALL
+  - OPEN
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: GAME 
+  type: fallback
+  disable-udp: false
+  proxies:
+  - OPEN
+  - CALL
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: SAME 
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  proxies:
+  - CALL
+  - OPEN
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: CALL
+  type: fallback
+  disable-udp: false
+  use:
+  - 01CALL
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+- name: OPEN
+  type: fallback
+  disable-udp: false
+  use:
+  - 02OPEN
+  url: http://www.gstatic.com/generate_204
+  interval: '24'
+
+rules:
+- RULE-SET,rule_whatsapp,CALL
+- RULE-SET,rule_personalads,ADBLOCK
+- MATCH,CONTROL
+
+rule-providers:
+  rule_whatsapp:
+    type: http
+    url: link.mu
+    behavior: classical
+    path: "./rule_whatsapp.yaml"
+  rule_personalads:
+    type: http
+    url: link.mu
+    behavior: classical
+    path: "./rule_personalads.yaml"
+
+
+
+unified-delay: true
+
+
+
+###
