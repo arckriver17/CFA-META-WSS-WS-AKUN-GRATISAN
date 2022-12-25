@@ -67,6 +67,23 @@ proxies:
         Host: sg3-v2ray.sshkit.org
     udp: true
 
+  - name: sg-contabo.vmess.sbs5
+    server: 104.18.21.226
+    port: 443
+    type: vmess
+    uuid: 54a3af50-84ac-11ed-b135-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-contabo.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: sg-contabo.vmess.sbs
+    udp: true
+
 
 proxy-groups:
   - name: final
@@ -77,6 +94,7 @@ proxy-groups:
       - sg2-v2ray.sshkit.org2
       - sg3-v2ray.sshkit.org3
       - sg3-v2ray.sshkit.org4
+      - sg-contabo.vmess.sbs5
 
 
 
